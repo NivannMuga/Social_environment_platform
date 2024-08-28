@@ -1,0 +1,260 @@
+@import url('variables.css');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'MontSerrat Alternate', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: var(--background-color);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 96vh; /* Full height */
+    overflow: hidden; /* Prevent scrolling on the whole page */
+}
+
+#navbar{
+    width: 100%;
+    height: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+#navbar div:first-child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#profileIcon{
+    width: 24px;
+    height: 24px;
+}
+#profileIcon img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#profileIcon:hover{
+    cursor: pointer;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-bottom: 20px;
+    overflow: hidden; /* Prevent scrolling in the main content area */
+    padding: 10px;
+    height: calc(100% - 45px);
+}
+#aside{
+    background-color: var(--container-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 12%;
+    padding: 15px;
+    border-radius: 10px;
+    height: 93%;
+    box-shadow: 3px 3px 12px 2px black;
+}
+#aside div:first-child{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#aside h4:hover{
+    cursor: pointer;
+}
+#reports {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;  /*Allows scrolling if there are many reports */
+    padding: 10px;
+    height: 100%;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;
+}
+#reports::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+.post {
+    width: 50%;
+    height: 300px; /* Fixed height */
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: var(--container-color);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure proper content alignment */
+    box-shadow: 3px 3px 12px 2px black;
+    overflow: hidden; /* Hide overflow content */
+    flex-shrink: 0;
+}
+#image {
+    width: 100%;
+    flex-grow: 1;
+    background-size: cover; /* Ensure the image covers the area without distortion */
+    background-position: center; /* Center the image */
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+}
+#description{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+#post_description{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: 2px white;
+}
+#post_description p {
+    margin: 0;
+    padding: 5px 0; /* Slight padding adjustment */
+    line-height: 1.2;
+    overflow: hidden; /* Prevent text overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text is too long */
+    /* white-space: nowrap; Keep the text in a single line */
+}
+#userProfile{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#nameHolder span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#profile_icon{
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+#profile_icon img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#profiledrawer{
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content:center;
+    width: 15%;
+}
+#profile{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    background-color: var(--container-color);
+    border-radius: 10px;
+    box-shadow: 3px 3px 12px 2px black;
+    align-items: center;
+    padding: 10px;
+}
+#profile img{
+    flex-grow: 1;
+    width: 100%;
+    margin: 10px;
+}
+#profileSettings{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    backdrop-filter: blur(10px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 2s ease-in-out;
+}
+#profileContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    height: 70%;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: var(--container-color);
+}
+#profile_image{
+    position: relative;
+    width: 90px;
+    height: 90px;
+}
+#profile_image img:first-child{
+    width: 100%;
+    height: 100%;
+}
+#profileEdit{
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 20px;
+    height: 20px
+}
+#profileEdit:hover{
+    cursor: pointer;
+}
+.logout:hover{
+    cursor: pointer;
+}
+#closeButton{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+}
+#closeButton:hover{
+    cursor: pointer;
+}
+
+#profile img{
+    border-radius: 20px;
+}
+
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-color);
+    height: 50px;
+}
+

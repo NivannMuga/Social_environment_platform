@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="shortcut icon" href="/image/leaf.png" type="image/x-icon">
+</head>
+<body>
+    <div id="navbar">
+        <div>
+            <img src="/image/leaf.png" alt="EnviroConnect icon">
+            <h2>EnviroConnect</h2>
+        </div>
+        <div id="navigation_links">
+            <h3 id="home_link">Home</h3>
+        </div>
+    </div>
+    <div id="container">
+        <div id="form_container">
+            <div id="image"></div>
+            <div id="form">
+                <h1>Welcome</h1>
+                <form id="registerForm">
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="text" name="username" id="username" placeholder="@username" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <select id="type" required>
+                        <option value="individual">Individual</option>
+                        <option value="organization">Organization</option>
+                    </select>
+                    <button type="submit" id="registerButton">Register</button>
+                </form>
+                <div id="loginLink">
+                    <p>Already have an account?</p>
+                    <button id="loginButton">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/register.js"></script>
+</body>
+</html>

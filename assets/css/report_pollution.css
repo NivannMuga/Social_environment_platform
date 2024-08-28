@@ -1,0 +1,111 @@
+@import url('variables.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+body{
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+#navbar{
+    width: 100%;
+    height: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+#navbar div:first-child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#navigation_links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#navigation_links h3{
+    font-size: 16px;
+    margin: 10px;
+}
+#navigation_links h3:hover{
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#report_form{
+    display: flex;
+    align-items: start;
+    justify-content:flex-start;
+    flex-direction: column;
+    width: 50%;
+}
+#report_form h4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#report_form input{
+    width: 80%;
+    height: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--container-color);
+}
+
+#report_form textarea{
+    width: 80%;
+    padding: 5px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: var(--container-color);
+}
+
+#report_form span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#uploadIcon{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+#uploadIcon:hover{
+    cursor: pointer;
+}
+
+button{
+    background-color: var(--button-color);
+    border-radius: 10px;
+    padding: 5px;
+    height: 35px;
+}
+
+
+footer{
+    background-color: var(--button-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100px;
+    align-items: center;
+}
+footer h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+footer img:hover{
+    cursor: pointer;
+}

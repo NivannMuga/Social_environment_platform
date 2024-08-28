@@ -1,0 +1,176 @@
+@import url('variables.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+body{
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+#navbar{
+    width: 100%;
+    height: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+#navbar div:first-child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#navigation_links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#navigation_links h3{
+    font-size: 16px;
+    margin: 10px;
+}
+#navigation_links h3:hover{
+    cursor: pointer;
+}
+/* main{
+    position: relative;
+} */
+#banner{
+    width: 100%;
+    height: 90vh;
+    border-radius: 20px;
+    float: center;
+    z-index: -1;
+    position: relative;
+    background-image: url('/image/banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#features_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#features_container h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#features_container div{
+    display: flex;
+    align-items: start;
+    justify-content:flex-start;
+    flex-direction: column;
+    padding: 20px;
+    width: 40%;
+    height: 200px;
+    background-color: var(--container-color);
+    border: 1px var(--container-border-color);
+    border-radius: 10px;
+}
+#features div:hover{
+    cursor: pointer;
+}
+.image_community{
+    background-image: url('/image/community_engagement.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 60%;
+    height: 60px;
+}
+.image_report{
+    background-image: url('/image/report_pollution.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 60%;
+}
+#recent_activities{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#recent_activities div{
+    display: flex;
+    align-items: start;
+    justify-content:flex-start;
+    flex-direction: column;
+    padding: 20px;
+    width: 40%;
+    height: 200px;
+    background-color: var(--container-color);
+    border: 1px var(--container-border-color);
+    border-radius: 10px;
+    margin: 10px;
+}
+#recent_activities div:hover{
+    cursor: pointer;
+}
+#recent_activities h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.beachPic{
+    background-image: url("/image/beach_cleanup.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100px;
+    border-radius: 20px;
+}
+.communityPic{
+    background-image: url("/image/community_garden.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100px;
+    border-radius: 20px;
+}
+.recyclingPic{
+    background-image: url("/image/recycling_workshop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100px;
+    border-radius: 20px;
+}
+
+
+footer{
+    background-color: var(--button-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100px;
+    align-items: center;
+}
+footer h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+footer img:hover{
+    cursor: pointer;
+}
+
+
+
+

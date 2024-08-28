@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Pollution</title>
+    <link rel="stylesheet" href="/css/report_pollution.css">
+    <link rel="shortcut icon" href="/image/leaf.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <div>
+                <img src="/image/leaf.png" alt="EnviroConnect icon">
+                <h2>EnviroConnect</h2>
+            </div>
+            <div id="navigation_links">
+                <h3 id="home_link">Home</h3>
+                <h3 id="community_link">Community Forum</h3>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2>Report an Incident</h2>
+        <div id="report_form">
+            <h4>Title</h4>
+            <input type="text" name="title" id="title" required>
+            <h4>Location</h4>
+            <input type="text" name="location" id="location" required>
+            <h4>Severity</h4>
+            <input type="text" name="severity" id="severity" placeholder="Scale of 1 to 10" required>
+            <h4>Description</h4>
+            <textarea name="Description" id="Description" required></textarea>
+            <span>
+                <h4>Upload Image</h4>
+                <input type="file" name="image" id="image" accept="image/*" style="display:none;" />
+                <img src="/image/upload.png" alt="Upload Icon" width="24px" height="24px" id="uploadIcon">
+                <p id="filename">No file chosen</p>
+            </span>
+            <button id="submitButton">Submit Report</button>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <h2>Quick Links</h2>
+            <h4>Email: mail@test.com</h4>
+            <h4>Phone: +254712345678</h4>
+        </div>
+        <div>
+            <h2>Contact Us</h2>
+            <span>
+                <a href="" target="_blank" rel="noopener noreferrer"><img src="/image/facebook.png" alt="Facebook"></a>
+                <a href="" target="_blank" rel="noopener noreferrer"><img src="/image/twitter.png" alt="Twitter"></a>
+                <a href="" target="_blank" rel="noopener noreferrer"><img src="/image/linkedin.png" alt="LinkedIn"></a>
+            </span>
+        </div>
+    </footer>
+    <script src="/js/report_pollution.js"></script>
+</body>
+</html>

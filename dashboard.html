@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="shortcut icon" href="/image/leaf.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+            <div>
+                <img src="/image/leaf.png" alt="EnviroConnect icon">
+                <h2>EnviroConnect</h2>
+            </div>
+            <div id="profileIcon"><img src="/image/account.png" alt="" id="accountPic"></div>
+            
+        </div>
+    </header>
+    <div id="profileSettings">
+        <div id="profileContainer">
+            <img src="/image/close.png" id="closeButton"/>
+            <div id="profile_image"><img src="/image/account.png" alt="" id="accountPic"><input type="file" name="image" id="image" accept="image/*" style="display:none;" /><img src="/image/profile_edit.png" alt="" id="profileEdit"></div>
+            <h4>Name</h4>
+            <h6 id="type">(Individual)</h6>
+            <h4 class="logout">Logout</h4>
+        </div>
+    </div>
+    <main>
+        <div id="aside">
+            <div>
+                <h4 id="community_link">Community Forum</h4>
+                <h4 id="report_link">Report Pollution</h4>
+            </div>
+            <h4 class="logout">logout</h3>
+        </div>
+        <div id="reports"></div>
+        <div id="profiledrawer">
+            <div id="profile">
+                <img src="" alt="" id="accountPic">
+                <h3>Name</h3>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h3>CopyRight</h3>
+    </footer>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
