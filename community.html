@@ -21,9 +21,26 @@
         </div>
     </header>
     <main>
-        <div id="search_container">
+        <!-- <div id="search_container">
             <input type="text" id="searchField" placeholder="Search">
             <img src="/image/search.png" alt="Search Icon" width="25px" height="25px">
+        </div> -->
+        <div id="commentBlur">
+            <div id="commentDIV">
+                <img src="/image/close.png" alt="" class="closeCaret">
+                <p id="debugError"></p>
+                <input type="text" name="comment" id="commentField" placeholder="Comment">
+                <button id="postBTN">Post</button>
+            </div>
+        </div>
+        <div id="commentsBox">
+            <div class="titleBar">
+                <img src="/image/close.png" alt="" class="closeCaret">
+                <h3>Comments</h3>
+            </div>
+            <div id="commentsDIV">
+                
+            </div>
         </div>
         <h2>Categories</h2>
         <div id="category_buttons">
@@ -49,23 +66,35 @@
                 <p>Community members joined hands to plant trees in the park.</p>
             </div>
         </div>
-        <h2>Recent Discussions</h2>
+        <h2>Discussions</h2>
         <div id="discussions">
-            <div>
-                <h3>Reducing Plastic Waste</h3>
-                <p>Join the discussion on how we can reduce plastic waste in our daily lives.</p>
-                <button>Comment</button>
-            </div>
-            <div>
-                <h3>Renewable Energy Sources</h3>
-                <p>Share your thoughts on the latest advancements in renewable energy.</p>
-                <button>Comment</button>
-            </div>
-            <div>
+            <div class="discussionContainer" data-discussion-id="1">
                 <h3>Urban Gardening Tips</h3>
                 <p>Discuss the best practices and tips for urban gardening.</p>
-                <button>Comment</button>
+                <div class="commentSection">
+                    <button class="commentBTN">Comment</button>
+                    <div><p class="comments" id="count1">No Comment</p></div>
+                </div>
             </div>
+            
+            <div class="discussionContainer" data-discussion-id="2">
+                <h3>Reducing Plastic Waste</h3>
+                <p>Join the discussion on how we can reduce plastic waste in our daily lives.</p>
+                <div class="commentSection">
+                    <button class="commentBTN">Comment</button>
+                    <div><p class="comments" id="count2">No Comment</p></div>
+                </div>
+            </div>
+            
+            <div class="discussionContainer" data-discussion-id="3">
+                <h3>Renewable Energy Sources</h3>
+                <p>Share your thoughts on the latest advancements in renewable energy.</p>
+                <div class="commentSection">
+                    <button class="commentBTN">Comment</button>
+                    <div><p class="comments" id="count3">No Comment</p></div>
+                </div>
+            </div>
+            
         </div>
     </main>
     <footer>

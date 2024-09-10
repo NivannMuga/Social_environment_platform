@@ -331,7 +331,88 @@ app.get('/api/get_user_data', (req, res) => {
     }
 });
 
+app.post('/api/comments', (req, res) => {
+    if (!req.session.user) {
+        return res.status(401).send('Unauthorized: Please log in.');
+    }
 
+    const { comment, discussionID } = req.body;
+    const userID = req.session.user.id;
+
+    if (!comment || !discussionID) {
+        return res.status(400).json({ error: 'Comment and Discussion ID are required' });
+    }
+
+    // Insert the comment into the database
+    const query = `
+        INSERT INTO comments (userID, comment, discussionID)
+        VALUES (?, ?, ?)
+    `;
+    db.query(query, [userID, comment, discussionID], (err, result) => {
+        if (err) {
+            console.error('Error inserting comment:', err);
+            return res.status(500).json({ error: 'Database error' });
+        }
+
+        // Get the updated comment count
+        const countQuery = `
+            SELECT COUNT(*) AS commentCount
+            FROM comments
+            WHERE discussionID = ?
+        `;
+        db.query(countQuery, [discussionID], (err, countResult) => {
+            if (err) {
+                console.error('Error fetching comment count:', err);
+                return res.status(500).json({ error: 'Database error' });
+            }
+
+            res.status(201).json({ message: 'Comment added', commentCount: countResult[0].commentCount });
+        });
+    });
+});
+
+
+
+// Route to get comments and comment count for a specific discussion
+app.get('/api/comments/:discussionID', (req, res) => {
+    const discussionID = req.params.discussionID;
+
+// Query to get all comments with user info and like counts for the discussion
+    const commentsQuery = `
+        SELECT comments.comment, IFNULL(comments.likes, 0) AS likes, Users.profile_image
+        FROM comments
+        JOIN Users ON comments.userID = users.id
+        WHERE comments.discussionID = ?
+    `;
+
+
+    // Query to count the number of comments
+    const countQuery = `
+        SELECT COUNT(*) AS commentCount
+        FROM comments
+        WHERE discussionID = ?
+    `;
+
+    // Fetch comments and comment count simultaneously
+    db.query(commentsQuery, [discussionID], (err, commentsResult) => {
+        if (err) {
+            console.error('Error fetching comments:', err);
+            return res.status(500).json({ error: 'Database error' });
+        }
+
+        db.query(countQuery, [discussionID], (err, countResult) => {
+            if (err) {
+                console.error('Error fetching comment count:', err);
+                return res.status(500).json({ error: 'Database error' });
+            }
+            console.log(commentsResult)
+            res.json({
+                commentCount: countResult[0].commentCount,
+                comments: commentsResult
+            });
+        });
+    });
+});
 
 
 

@@ -21,23 +21,32 @@
         </div>
     </header>
     <main>
-        <h2>Report an Incident</h2>
-        <div id="report_form">
-            <h4>Title</h4>
-            <input type="text" name="title" id="title" required>
-            <h4>Location</h4>
-            <input type="text" name="location" id="location" required>
-            <h4>Severity</h4>
-            <input type="text" name="severity" id="severity" placeholder="Scale of 1 to 10" required>
-            <h4>Description</h4>
-            <textarea name="Description" id="Description" required></textarea>
-            <span>
-                <h4>Upload Image</h4>
-                <input type="file" name="image" id="image" accept="image/*" style="display:none;" />
-                <img src="/image/upload.png" alt="Upload Icon" width="24px" height="24px" id="uploadIcon">
-                <p id="filename">No file chosen</p>
-            </span>
-            <button id="submitButton">Submit Report</button>
+        <div id="aside">
+            <div>
+                <div id="communityForum"><h4 id="community_link">Community Forum</h4></div>
+                <div id="reportPollution"><h4 id="report_link">Report Pollution</h4></div>
+            </div>
+            <h4 class="logout">logout</h3>
+        </div>
+        <div id="reportDiv">
+            <h2>Report an Incident</h2>
+            <div id="report_form">
+                <h4>Title</h4>
+                <input type="text" name="title" id="title" required>
+                <h4>Location</h4>
+                <input type="text" name="location" id="location" required>
+                <h4>Severity</h4>
+                <input type="text" name="severity" id="severity" placeholder="Scale of 1 to 10" required>
+                <h4>Description</h4>
+                <textarea name="Description" id="Description" required></textarea>
+                <span>
+                    <h4>Upload Image</h4>
+                    <input type="file" name="image" id="image" accept="image/*" style="display:none;" />
+                    <img src="/image/upload.png" alt="Upload Icon" width="24px" height="24px" id="uploadIcon">
+                    <p id="filename">No file chosen</p>
+                </span>
+                <button id="submitButton">Submit Report</button>
+            </div>
         </div>
     </main>
     <footer>
